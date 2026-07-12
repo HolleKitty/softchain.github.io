@@ -20,24 +20,14 @@
             padding: 2rem;
         }
 
-        .container { max-width: 640px; }
+        .container { max-width: 480px; }
 
-        .brand {
-            font-size: 3.5rem;
-            font-weight: 200;
-            letter-spacing: 0.15em;
-            color: #f0f0f0;
-            margin-bottom: 0.25rem;
-        }
-
-        .brand .dot { color: #7d8ca3; }
-
-        .domain {
-            font-size: 1.05rem;
+        h1 {
+            font-size: 2rem;
             font-weight: 300;
-            letter-spacing: 0.05em;
-            color: #5a6377;
-            margin-bottom: 3rem;
+            letter-spacing: 0.12em;
+            color: #d0d4e4;
+            margin-bottom: 1.5rem;
         }
 
         .divider {
@@ -73,13 +63,9 @@
 </head>
 <body>
     <div class="container">
-        <div class="brand">{{ page.brand_html }}</div>
-        <div class="domain">{{ site.domain }}</div>
+        <h1>{{ site.title }}</h1>
         <div class="divider"></div>
-        <div class="message">
-            {{ site.description }}<br>
-            {{ site.tagline }}
-        </div>
+        <div class="message">{{ site.description }}</div>
     </div>
 
     <div class="footer">
