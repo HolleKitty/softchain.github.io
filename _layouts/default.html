@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>长风 · Ægis — æg.com</title>
+    <title>{{ site.title }} — {{ site.domain }}</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", system-ui, -apple-system, sans-serif;
+            font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", system-ui, sans-serif;
             background: #0a0a0f;
             color: #c8c8d4;
             display: flex;
@@ -20,9 +20,7 @@
             padding: 2rem;
         }
 
-        .container {
-            max-width: 640px;
-        }
+        .container { max-width: 640px; }
 
         .brand {
             font-size: 3.5rem;
@@ -32,9 +30,7 @@
             margin-bottom: 0.25rem;
         }
 
-        .brand .dot {
-            color: #7d8ca3;
-        }
+        .brand .dot { color: #7d8ca3; }
 
         .domain {
             font-size: 1.05rem;
@@ -58,18 +54,12 @@
             color: #8a92a6;
         }
 
-        .message strong {
-            color: #c0c6d4;
-            font-weight: 400;
-        }
-
         .footer {
             position: fixed;
             bottom: 2rem;
             font-size: 0.8rem;
             font-weight: 300;
             color: #4a505e;
-            letter-spacing: 0.03em;
         }
 
         .footer a {
@@ -78,28 +68,22 @@
             transition: color 0.3s;
         }
 
-        .footer a:hover {
-            color: #8a92a6;
-        }
+        .footer a:hover { color: #8a92a6; }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <div class="brand">长风<span class="dot">·</span>Ægis</div>
-        <div class="domain">æg.com</div>
-
+        <div class="brand">{{ page.brand_html }}</div>
+        <div class="domain">{{ site.domain }}</div>
         <div class="divider"></div>
-
         <div class="message">
-            乘长风，见天地。<br>
-            网站建设中，敬请期待。
+            {{ site.description }}<br>
+            {{ site.tagline }}
         </div>
     </div>
 
     <div class="footer">
-        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">粤ICP备2025435217号-2</a>
+        <a href="{{ site.footer_link }}" target="_blank" rel="noopener">{{ site.footer_text }}</a>
     </div>
-
 </body>
 </html>
